@@ -1,0 +1,275 @@
+*{
+    box-sizing: border-box;
+    margin: 0px ;
+    padding: 0px;
+}
+body{
+    font-family: 'Baloo 2', cursive;
+}
+.container{
+    display: block;
+    padding:5px;
+    max-width:1000px;
+    height: 510px;
+    margin: auto;
+}
+:root{
+    --maincolor:#6060d7;
+    --seccolor:#9499f1;
+    --textcolor:#464444;
+}
+.pone{
+
+}
+.pone>.part{
+    background-color: var(--maincolor);
+    position: absolute;
+    z-index: -5;
+    width:25%;
+    height: 100vh;
+    left: 75%;
+}
+.pone>.path{
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    background-image: url(/images/Place\ Your\ Image\ Here\ \(Double\ Click\ to\ Edit\).png);
+    background-size: cover;
+    left: 65%;
+    top: 25%;
+    border: 5px solid var(--maincolor);    
+    border-bottom-left-radius: 100px ;
+    border-top-right-radius: 150px;
+    border-top-left-radius:100px ;
+    border-bottom-right-radius: 150px;
+    box-shadow: 0px 0px 50px 5px var(--textcolor);
+    
+}
+.pone>.container>.header{
+    display: grid;
+    align-items: center;
+    margin-top: 10px;
+    grid-template-columns: 0.5fr 1.3fr 0.7fr;
+}
+.pone>.container>.header>.logo{
+    background-image: url(/images/logo.png);
+    background-size: contain;
+    width: 90px;
+    height: 40px;
+    background-repeat: no-repeat;
+}
+.pone>.container>.header>.nav{
+
+}
+.pone>.container>.header>.nav>ul{
+    list-style: none;
+    padding: 0px;
+    text-align: center;
+    background-image: linear-gradient(90deg, #6060d7 0%, #9499f1 100%);
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding:10px 0px 10px 0px;
+}
+.pone>.container>.header>.nav>ul>li{
+    display: inline-block;
+    text-transform: capitalize;
+    padding: 10px;
+    font-weight: 600;
+    color: white;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.pone>.container>.header>.nav>ul>li:hover{
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.pone>.container>.header>.nav>ul>input{
+    display: inline-block;
+    width: 140px;
+    border: solid 2px var(--seccolor);
+    outline: none;
+    border-radius: 10px;
+    caret-color: var(--maincolor);
+    color: var(--maincolor);
+    padding-left: 10px;
+}
+.pone>.container>.header>.nav>ul>input::placeholder{
+    text-align: center;
+}
+.pone>.container>.pheader{
+    display: none;
+}
+@media (max-width:600px){
+    .pone>.container>.header{
+        display: none;
+    }
+    .pone>.path,.pone>.part{
+        display: none;
+    }
+    .pone>.container>.pheader{
+        display: grid;
+        grid-template-columns: 90px 1fr 30px;
+        grid-template-rows: 50px 1fr;
+    }
+    .pone>.container>.pheader>#bar{
+        color: #9499f1;
+        line-height: 30px;
+        grid-area: 1/3;
+    }
+    .pone>.container>.pheader>#bar:hover~.nav{
+        display: block;
+    }
+    .pone>.container>.pheader>.logo{
+        background-image: url(/images/logo.png);
+        background-size: contain;
+        width: 90px;
+        height: 40px;
+        background-repeat: no-repeat;
+        grid-area: 1/1;
+    }
+    .pone>.container>.pheader>.nav{
+        display: none;
+        grid-area: 2/1/2/4;
+    }
+    .pone>.container>.pheader>.nav>ul{
+        display: grid;
+        grid-template-columns:  1fr 1.5fr 1fr;
+        grid-template-rows: repeat(5,1fr);
+        list-style: none;
+        text-align: center;
+        background-image: linear-gradient(90deg, #6060d7 0%, #9499f1 100%);
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .pone>.container>.pheader>.nav>ul>li{
+        padding: 10px;
+        color: white;
+        border: 1px solid transparent;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+    .pone>.container>.pheader>.nav>ul>li:hover{
+        border:1px solid white ;
+        border-radius: 10px;
+    }
+    .pone>.container>.pheader>.nav>ul>li:first-child{
+        padding: 10px;
+        grid-area: 2/2;
+    }
+    .pone>.container>.pheader>.nav>ul>li:nth-child(2){
+        padding: 10px;
+        grid-area: 3/2;
+    }
+    .pone>.container>.pheader>.nav>ul>li:nth-child(3){
+        padding: 10px;
+        grid-area: 4/2;
+    }
+    .pone>.container>.pheader>.nav>ul>li:nth-child(4){
+        padding: 10px;
+        grid-area: 5/2;
+    }
+    .pone>.container>.pheader>.nav>ul>.psearch{
+        grid-area: 1/1/1/4;
+        margin: auto;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 0.1fr;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .pone>.container>.pheader>.nav>ul>.psearch>input{
+        outline: none;
+        border: 0px solid transparent;
+    }
+    .pone>.container>.pheader>.nav>ul>.psearch>i{
+        color: var(--maincolor);
+        font-weight: 800;
+    }
+}
+/* start text */
+.pone>.container>.text{
+    position: absolute;
+    z-index: -1;
+    margin-top: 20px;
+    width: 95%;
+    padding: 10px;
+    display: grid;
+}
+.pone>.container>.text>h3{
+    display: block;
+    font-weight: bolder;
+    font-size: 7vw;
+    color: var(--textcolor);
+
+}
+.pone>.container>.text>h1{
+    display: block;
+    font-weight: bolder;
+    font-size: 10vw;
+    color: var(--maincolor);
+    line-height: 15px;
+    margin-top: 25px;
+}
+.pone>.container>.text>h2{
+    display: block;
+    font-size: 6vw;
+    color: var(--textcolor);
+    line-height: 10px;
+}
+.pone>.container>.text>p{
+    font-size: 2vw;
+    display: block;
+    width: 50%;
+    color: var(--textcolor);
+    margin-top: 30px;
+}
+@media (max-width:600px){
+    .pone>.container>.text{
+        text-align: center;
+    }
+    .pone>.container>.text>p{
+        width: 100%;
+        margin-top: 15px;
+        font-weight: 900;
+    }
+}
+/*/*satrt of buttons
+    .pone>.container>.button{
+        width: 180px;
+        position:relative;
+        top: 36vw;
+        padding-left: 10px;
+    }
+    .pone>.container>.button>.btone{
+        display: inline-block;
+        width: 80px;
+        background-color: #b5b5ff;
+        padding: 5px;
+        border: 1px solid transparent;
+        border-radius:5px ;
+        color: white;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+    .pone>.container>.button>.btone:hover{
+        background-color: #8f8ffc;
+        border: 1px var(--textcolor) solid;
+    }
+    .pone>.container>.button>.bttwo{
+        display: inline-block;
+        width: 80px;
+        background-color: #e1e1e3;
+        padding: 5px;
+        border: 1px solid transparent;
+        border-radius:5px;
+        color: white;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+    .pone>.container>.button>.bttwo:hover{
+        background-color: #b7b7c1 ;
+        border: 1px var(--textcolor) solid;
+    }
+    @media (max-width:600px){
+    }
+/*end of buttons*/
