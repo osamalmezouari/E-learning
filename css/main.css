@@ -33,7 +33,7 @@ body{
     position: absolute;
     width: 30%;
     height: 50%;
-    background-image: url(/images/Place\ Your\ Image\ Here\ \(Double\ Click\ to\ Edit\).png);
+    background-image: url(../images/Place\ Your\ Image\ Here\ \(Double\ Click\ to\ Edit\).png);
     background-size: cover;
     left: 65%;
     top: 25%;
@@ -52,7 +52,7 @@ body{
     grid-template-columns: 0.5fr 1.3fr 0.7fr;
 }
 .pone>.container>.header>.logo{
-    background-image: url(/images/logo.png);
+    background-image: url(../images/logo.png);
     background-size: contain;
     width: 90px;
     height: 40px;
@@ -120,7 +120,7 @@ body{
         display: block;
     }
     .pone>.container>.pheader>.logo{
-        background-image: url(/images/logo.png);
+        background-image: url(../images/logo.png);
         background-size: contain;
         width: 90px;
         height: 40px;
